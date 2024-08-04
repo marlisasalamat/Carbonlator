@@ -24,8 +24,6 @@ def main():
 
 
 def introduction():
-    st.write("Please enter the following information:")
-    user_input = st.text_input("Enter the app name:")
 
     st.title("What is Carbonlator?")
 
@@ -33,9 +31,7 @@ def introduction():
     st.subheader("What is Carbonlator?")
     st.write("What is Carbonlator?")
 
-    st.write ("madafaka")
-
-    return user_input
+    st.write("madafaka")
 
 
 if __name__ == '__main__':
