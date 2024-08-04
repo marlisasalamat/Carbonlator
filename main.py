@@ -14,7 +14,7 @@ def main():
     )
 
     if function == 'Introduction':
-        user_instructions()
+        introduction()
 
     elif function == 'Carbon Emission Calculator':
         co2_calculator()
@@ -23,9 +23,15 @@ def main():
         app_checklist()
 
 
-def user_instructions():
+def introduction():
     st.write("Please enter the following information:")
     user_input = st.text_input("Enter the app name:")
+
+    st.title("What is Carbonlator?")
+
+    st.header("What is Carbonlator?")
+    st.subheader("What is Carbonlator?")
+    st.write("What is Carbonlator?")
 
     return user_input
 
