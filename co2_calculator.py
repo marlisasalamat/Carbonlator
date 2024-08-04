@@ -1,7 +1,7 @@
 import streamlit as st
 
 def co2_calculator():
-    st.header("Carbon Emission Calculator")
+    st.header("Carbon Emission Simulator Calculator")
 
     st.write("Please enter the following information:")
     user_input = st.text_input("Enter the app name:")
