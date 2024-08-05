@@ -35,9 +35,12 @@ def ml_classification():
     report = classification_report(y_test, y_pred)
     matrix = confusion_matrix(y_test, y_pred)
 
-    # Export the model to pickle file
-    with open('model.pkl', 'wb') as file:
+    # Save the model as a pickle file
+    with open('knn_model.pkl', 'wb') as file:
         pickle.dump(model, file)
 
-    return accuracy, report, matrix
+    # Save the scaler as a pickle file
+    with open('scaler.pkl', 'wb') as file:
+        pickle.dump(scaler, file)
 
+    return accuracy, report, matrix, y_test, y_pred

@@ -1,8 +1,10 @@
 import streamlit as st
-from co2_calculator import co2_calculator
-from checklist import app_checklist
+from CarbonEmissionSimulatorCalculator import co2_calculator
+from CarbonlatorPrediction import app_checklist
+import pickle
 
 def main():
+    st.sidebar.title("Carbonlator App")
     tab_options = [['Introduction'], ['Carbon Emission Simulator Calculator'], ['App Checklist']]
 
     function = st.sidebar.radio(
@@ -11,14 +13,55 @@ def main():
         index=0
     )
 
+    app_name = st.sidebar.text_input("Enter the app name:")
+
     if function == 'Introduction':
         introduction()
 
     elif function == 'Carbon Emission Simulator Calculator':
-        co2_calculator()
+
+        # Title for the CO2 calculator section
+        st.title("Carbon Emission Simulator Calculator")
+
+        # Add your CO2 calculator logic here
+        st.subheader("This is where the CO2 calculator will be implemented.")        
+
+        if app_name:
+            app_name = co2_calculator(app_name)
+        else:
+            st.warning('Please Enter Your App Name')
 
     elif function == 'App Checklist':
-        app_checklist()
+
+        # Title for the app checklist section
+        st.title("App Checklist")
+
+        # Add your app checklist logic here
+        st.write("This is where the app checklist will be implemented.")        
+
+        if app_name:
+            df = app_checklist()
+            pred = st.button("Predict")
+            if pred:
+                # Load the model and scaler from the pickle file
+                with open('model.pkl', 'rb') as file:
+                    loaded_knn = pickle.load(file)
+
+                with open('scaler.pkl', 'rb') as file:
+                    loaded_scaler = pickle.load(file)
+
+                # Predict on new data using the loaded model and scaler
+                predict_df = loaded_scaler.transform([df['Value'].values])
+                prediction = loaded_knn.predict(predict_df)
+
+                if prediction == 1:
+                    st.write(f"The app **{app_name}** should be *continued*. ✅")
+                else:
+                    st.write(f"The app **{app_name}** should be *decommissioned*. ❌")
+
+        else:
+            st.warning('Please Enter Your App Name')
+
 
 def introduction():
     # Title of the app
