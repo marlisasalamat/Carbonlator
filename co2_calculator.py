@@ -1,6 +1,12 @@
 import streamlit as st
 
 def co2_calculator():
+    # Title for the CO2 calculator section
+    st.title("Carbon Emission Simulator Calculator")
+
+    # Add your CO2 calculator logic here
+    st.write("This is where the CO2 calculator will be implemented.")
+
     st.header("Carbon Emission Simulator Calculator")
 
     st.write("Please enter the following information:")

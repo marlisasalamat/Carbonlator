@@ -1,5 +1,5 @@
 import streamlit as st
-from Carbon Emission Simulator Calculator import Carbon Emission Simulator Calculator
+from co2_calculator import co2_calculator
 from checklist import app_checklist
 
 def main():
@@ -42,19 +42,19 @@ def introduction():
         2. **Electricity Generation**: Power plants that burn coal, oil, or natural gas are major sources of carbon emissions.
         3. **Industrial Processes**: Manufacturing and construction activities often involve processes that emit greenhouse gases.
         """)
-        
+
         st.markdown("#### Impacts of Carbon Emissions")
         st.markdown("""
         High levels of carbon emissions lead to global warming, which can cause severe weather patterns, rising sea levels, and disruptions to ecosystems. Reducing carbon emissions is essential for protecting the environment and ensuring a sustainable future.
         """)
-        
+
         st.markdown("#### Strategies for Reduction")
         st.markdown("""
         - **Energy Efficiency**: Improving energy efficiency in buildings and transportation can significantly reduce emissions.
         - **Renewable Energy**: Transitioning to solar, wind, and other renewable energy sources can help decrease reliance on fossil fuels.
         - **Carbon Offsetting**: Investing in projects that absorb CO2, such as reforestation, can help offset emissions.
         """)
-        
+
         st.markdown("""
         Understanding and addressing carbon emissions is vital for combating climate change and protecting our planet for future generations.
         """)
@@ -69,7 +69,7 @@ def introduction():
         The app utilizes advanced algorithms to calculate emissions based on various factors, including energy consumption, transportation habits, and waste generation. Whether you are a small business looking to understand your environmental impact or an individual aiming to reduce your carbon footprint, Carbonlator offers tailored insights and recommendations.
 
         Key features of Carbonlator include:
-        
+
         - **User-Friendly Interface**: Easily navigate through the app to input data and view results.
         - **Real-Time Calculations**: Get instant feedback on your carbon emissions based on your inputs.
         - **Actionable Insights**: Receive personalized recommendations for reducing your carbon footprint.
@@ -77,20 +77,6 @@ def introduction():
 
         By leveraging Carbonlator, users can take meaningful steps towards reducing their carbon emissions and contributing to a more sustainable future. Join us in the fight against climate change by understanding your impact and making informed decisions.
         """)
-
-def co2_calculator():
-    # Title for the CO2 calculator section
-    st.title("Carbon Emission Simulator Calculator")
-    
-    # Add your CO2 calculator logic here
-    st.write("This is where the CO2 calculator will be implemented.")
-
-def app_checklist():
-    # Title for the app checklist section
-    st.title("App Checklist")
-    
-    # Add your app checklist logic here
-    st.write("This is where the app checklist will be implemented.")
 
 if __name__ == '__main__':
     main()

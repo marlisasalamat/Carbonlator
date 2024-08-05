@@ -2,6 +2,13 @@ import streamlit as st
 import pandas as pd
 
 def app_checklist():
+
+    # Title for the app checklist section
+    st.title("App Checklist")
+
+    # Add your app checklist logic here
+    st.write("This is where the app checklist will be implemented.")
+
     st.subheader("Please select the following criterias within your apps:")
 
     st.write("**Usage and Relevance**")
