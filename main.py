@@ -142,9 +142,9 @@ def introduction():
         
                     
         st.markdown("#### Machine Learning Feature")
-        col1, col2, col3 = st.columns([1, 1, 1])
+        col1, col2, col3 = st.columns([1, 1, 5])
         with col2:
-         st.image('./Media/KNN.png',)
+         st.image('./Media/KNN.png',width=400,)
         st.markdown("""**K-Nearest Neighbour**""")
         st.markdown(""" K-Nearest Neighbor (KNN) is a simple and effective machine learning algorithm used for classification and regression tasks. It works by finding the K closest data points (neighbors) to a given input and making a prediction based on the majority class (for classification) or the average value (for regression) of those neighbors. Here's a simple explanation of how KNN works:""")
         
