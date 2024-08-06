@@ -111,12 +111,9 @@ def introduction():
     with st.expander("Read More about Carbonlator"):
         col1, col2, col3 = st.columns([1, 1, 1])
         with col2:
-         st.image('./Media/logo medium.png', width=250, )
-        st.markdown("""### Introducing Carbonlator
-                    
-                    
-        
-
+         st.image('./Media/logo medium.png', width=300, )
+        st.markdown("""### Introducing Carbonlator""")
+        st.markdown("""            
         Carbonlator is an innovative application designed to help individuals and organizations assess their carbon footprint effectively. By providing users with a straightforward interface, Carbonlator enables users to input their activities and receive immediate feedback on their carbon emissions. 
 
         The app utilizes advanced algorithms to calculate emissions based on various factors, including energy consumption, transportation habits, and waste generation. Whether you are a small business looking to understand your environmental impact or an individual aiming to reduce your carbon footprint, Carbonlator offers tailored insights and recommendations.
@@ -129,8 +126,6 @@ def introduction():
 
         By leveraging Carbonlator, users can take meaningful steps towards reducing their carbon emissions and contributing to a more sustainable future. Join us in the fight against climate change by understanding your impact and making informed decisions.
 
-                    
-        
         """)
 
     with st.expander("How does it work?"):
