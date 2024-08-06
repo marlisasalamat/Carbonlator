@@ -84,6 +84,7 @@ def introduction():
         1. **Transportation**: Cars, trucks, airplanes, and ships burn fossil fuels, releasing CO2 into the atmosphere.
         2. **Electricity Generation**: Power plants that burn coal, oil, or natural gas are major sources of carbon emissions.
         3. **Industrial Processes**: Manufacturing and construction activities often involve processes that emit greenhouse gases.
+        4. **Gadget usage**: From the usage from your smartphone and applications can actually emit carbon from the electricity usage and having a cloud storage can actually leave carbon footprint.
         """)
 
         st.markdown("#### Impacts of Carbon Emissions")
@@ -96,6 +97,7 @@ def introduction():
         - **Energy Efficiency**: Improving energy efficiency in buildings and transportation can significantly reduce emissions.
         - **Renewable Energy**: Transitioning to solar, wind, and other renewable energy sources can help decrease reliance on fossil fuels.
         - **Carbon Offsetting**: Investing in projects that absorb CO2, such as reforestation, can help offset emissions.
+        - **Smart usage**: Delete unnecesarry application in your phone that have similiar function and try to use application that support Zero Net Carbon Emission.
         """)
 
         st.markdown("""
@@ -115,10 +117,22 @@ def introduction():
 
         - **User-Friendly Interface**: Easily navigate through the app to input data and view results.
         - **Real-Time Calculations**: Get instant feedback on your carbon emissions based on your inputs.
-        - **Actionable Insights**: Receive personalized recommendations for reducing your carbon footprint.
-        - **Tracking Progress**: Monitor your emissions over time and see how your efforts contribute to sustainability goals.
+        - **Calculation Simulator**: You can get a gist of how much carbon emission you had produced by checking our Simulator feature and can start using your smartphone attentively now!
 
         By leveraging Carbonlator, users can take meaningful steps towards reducing their carbon emissions and contributing to a more sustainable future. Join us in the fight against climate change by understanding your impact and making informed decisions.
+        """)
+
+    with st.expander("About us"):
+        st.markdown("""
+        ### Background Story : Senjaya Innovators
+
+        The Senjaya Innovators is an enthusiastic group of students from SK Sentosa Jaya, a primary school located in Kinabatangan, Sabah, who are passionate about learning STEM and coding. Under the guidance of their dedicated teacher, Mr. Danial, the Senjaya Innovators are constantly seeking new opportunities to expand their knowledge and skills in these fields.
+
+
+        The team, composed of bright and curious students, is driven by a strong desire to explore the world of technology and innovation. They spend their free time tinkering with robotics kits, experimenting with coding languages, and participating in various STEM-related activities organized by the school.
+
+        As the Senjaya Innovators continue to grow and learn, they are excited about the future. They dream of creating innovative solutions to real-world problems and inspiring others to pursue their passions in STEM and coding. With the support of their school, teacher, and community, the Senjaya Innovators are well on their way to becoming the next generation of leaders in technology and innovation.
+
         """)
 
 if __name__ == '__main__':
