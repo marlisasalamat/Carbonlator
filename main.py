@@ -2,8 +2,11 @@ import streamlit as st
 from CarbonEmissionSimulatorCalculator import co2_calculator
 from CarbonlatorPrediction import app_checklist
 import pickle
-
+link_url = "https://www.facebook.com/share/Z6B7v51vvof5kuMj/?mibextid=qi2Omg"
+link_url1 = "https://www.enelgreenpower.com/learning-hub/energy-transition/carbon-footprint"
+link_url2 = "https://www.britannica.com/science/carbon-footprint"             
 def main():
+    
     st.sidebar.title("Carbonlator App")
     tab_options = [['Introduction'], ['Carbon Emission Simulator Calculator'], ['App Checklist']]
 
@@ -24,7 +27,7 @@ def main():
         st.title("Carbon Emission Simulator Calculator")
 
         # Add your CO2 calculator logic here
-        st.subheader("This is where the CO2 calculator will be implemented.")        
+        st.subheader("Let's see how much carbon footprint you have produced.")        
 
         if app_name:
             app_name = co2_calculator(app_name)
@@ -106,8 +109,13 @@ def introduction():
 
     # Additional expander for introducing Carbonlator
     with st.expander("Read More about Carbonlator"):
-        st.markdown("""
-        ### Introducing Carbonlator
+        col1, col2, col3 = st.columns([1, 1, 1])
+        with col2:
+         st.image('./Media/logo medium.png', width=250, )
+        st.markdown("""### Introducing Carbonlator
+                    
+                    
+        
 
         Carbonlator is an innovative application designed to help individuals and organizations assess their carbon footprint effectively. By providing users with a straightforward interface, Carbonlator enables users to input their activities and receive immediate feedback on their carbon emissions. 
 
@@ -120,7 +128,43 @@ def introduction():
         - **Calculation Simulator**: You can get a gist of how much carbon emission you had produced by checking our Simulator feature and can start using your smartphone attentively now!
 
         By leveraging Carbonlator, users can take meaningful steps towards reducing their carbon emissions and contributing to a more sustainable future. Join us in the fight against climate change by understanding your impact and making informed decisions.
+
+                    
+        
         """)
+
+    with st.expander("How does it work?"):
+        st.markdown("#### Simulator Calculator")
+        col1, col2, col3 = st.columns([1, 6, 5])
+        with col2:
+         st.image('./Media/formula.png', width=500, )
+         st.markdown("""**Calculation formula** """)
+         st.markdown("""
+
+            This is the general formula that had been used to calculate the carbon emission. This had been sourced from: """) 
+         st.markdown(f"[1. Enel Green]({link_url})", unsafe_allow_html=True)
+         st.markdown(f"[2. Britannica]({link_url})", unsafe_allow_html=True)
+        
+                    
+        st.markdown("#### Machine Learning Feature")
+        col1, col2, col3 = st.columns([1, 1, 1])
+        with col2:
+         st.image('./Media/KNN.png',)
+        st.markdown("""**K-Nearest Neighbour**""")
+        st.markdown(""" K-Nearest Neighbor (KNN) is a simple and effective machine learning algorithm used for classification and regression tasks. It works by finding the K closest data points (neighbors) to a given input and making a prediction based on the majority class (for classification) or the average value (for regression) of those neighbors. Here's a simple explanation of how KNN works:""")
+        
+        st.markdown("""
+        1. **Choose a value for K,** which represents the number of nearest neighbors to consider.
+        2. **Calculate the distance** between the input data point and all other data points in the dataset. The most common distance metric used is Euclidean distance.
+        3. **Sort the distances**  in ascending order and select the K data points with the smallest distances.
+        4. **For classification,** the algorithm assigns the input data point to the class that has the most representatives among the K nearest neighbors. For regression, it predicts the average value of the K nearest neighbors.
+        5. **The algorithm returns,** the predicted class (for classification) or the predicted value (for regression).
+        """)
+
+        st.markdown("#### Checklist Concept")
+
+        st.markdown("""Hence the checklist concept is used by adopting K-Nearest Neighbour concept where every checkbox represent a data point and it functions to find which classification it will be (Commission/decommission)""")
+
 
     with st.expander("About us"):
         st.markdown("""
@@ -133,7 +177,10 @@ def introduction():
 
         As the Senjaya Innovators continue to grow and learn, they are excited about the future. They dream of creating innovative solutions to real-world problems and inspiring others to pursue their passions in STEM and coding. With the support of their school, teacher, and community, the Senjaya Innovators are well on their way to becoming the next generation of leaders in technology and innovation.
 
+        
         """)
+
+        st.markdown(f"[Click here to go to know more about SK Sentosa Jaya]({link_url})", unsafe_allow_html=True)
 
 if __name__ == '__main__':
     main()
